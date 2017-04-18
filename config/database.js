@@ -18,6 +18,7 @@ module.exports = (config) => {
     require('./../models/Role').initialize();
     require('./../models/User').initialize();
     require('./../models/Article');
+    require('./../models/Comments');
 
 };
 

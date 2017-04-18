@@ -3,6 +3,7 @@
  */
 const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.Types.ObjectId;
+//const CommentsId = mongoose.Schema.Types.ObjectId;
 
 
 let articleSchema = mongoose.Schema({
@@ -10,7 +11,8 @@ let articleSchema = mongoose.Schema({
     content: {type: String, required:true},
     author:{type: ObjectId, required: true, ref: 'User'},
     date: {type: Date, default: Date.now()},
-    imagePath: {type: String}
+    imagePath: {type: String},
+    comments: [{type: ObjectId , ref: 'Comments'}]
 
 
 });
